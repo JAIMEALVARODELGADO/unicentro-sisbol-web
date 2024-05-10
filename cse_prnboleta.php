@@ -49,7 +49,7 @@ while($row=pg_fetch_array($consulta)){
 
     $f=$f+4;
     $pdf->SetXY(2,$f);
-    $pdf->Cell(68,4,"CAMPAÑA PUBLICITARIA",0,0,'C');
+    $pdf->Cell(68,4,utf8_decode("CAMPAÑA PUBLICITARIA"),0,0,'C');
 
     $pdf->SetFont('Arial','',6);
 

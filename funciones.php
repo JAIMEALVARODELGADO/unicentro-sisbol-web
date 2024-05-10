@@ -49,6 +49,7 @@ function cambiafechadmy($xfecha_)
 function conectarbd()
 {
   //conexion local
+  //$conexion = pg_connect("host='127.0.0.1' port='5432' dbname='sisbolbd_uc' user='postgres' password='12996873'") or die('No se ha podido conectar: ' . pg_last_error());
   $conexion = pg_connect("host='127.0.0.1' port='5432' dbname='sisbolbd_uc' user='postgres' password='12996873'") or die('No se ha podido conectar: ' . pg_last_error());
   //conexion cloud
   //$conexion=pg_connect("host='ec2-52-5-110-35.compute-1.amazonaws.com' port='5432' dbname='d1nlhajk5a952t' user='mdbsvljjjfhiri' password='6636d895f0ec9fc782b771f75f6a72ca1568adf7c74efe5f8bdc96b2673db617'") or die('No se ha podido conectar: ' . pg_last_error());

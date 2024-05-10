@@ -13,7 +13,7 @@ var a = ""
     if (document.form1.iden_ucs.value == "") { a += " Identificación\n"; }
     if (document.form1.nomb_ucs.value == "") { a += " Nombre\n"; }
     if (document.form1.logi_ucs.value == "") { a += " Login\n"; }
-	if (document.form1.tipo_ucs.value == "") { a += " Tipo de Usuario\n"; }
+	  if (document.form1.tipo_ucs.value == "") { a += " Tipo de Usuario\n"; }
     if (a != "") 
     { alert(error + a);return true;}
 
@@ -71,8 +71,9 @@ $row=pg_fetch_array($consulta);
 </table>
 
 <input type='hidden' name='codi_ucs' value='<?php echo $_GET['codi_ucs'];?>'>
-<script language='javascript'>
-document.form1.tipo_ucs.value='<?php echo $row[tipo_ucs];?>';
+
+<script languaje="javascript">
+  document.form1.tipo_ucs.value="<?php echo $row['tipo_ucs'];?>";
 </script>
 <br>
 <table class='Tbl0' width='70%'>

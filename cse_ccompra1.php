@@ -175,7 +175,7 @@ if(!empty($_POST['nrod_cli'])||!empty($codi_cli)){
     $consultacli="select 	codi_cli,tpid_cli,nrod_cli,exped_cli,nomb_cli,apel_cli,dire_cli,tele_cli,fnac_cli,sexo_cli,emai_cli,prof_cli,punt_cli,cliente.id_barrio,vw_barrio.descripcion
                               from sisbol.cliente
                               LEFT JOIN sisbol.vw_barrio ON vw_barrio.id_barrio=cliente.id_barrio where tpid_cli='$tpid_cli' and nrod_cli='$nrod_cli'";
-    //echo $consultacli;
+    //echo "<br>".$consultacli;
     $consultacli=pg_query($link,$consultacli);
   }
   if(pg_num_rows($consultacli)<>0){

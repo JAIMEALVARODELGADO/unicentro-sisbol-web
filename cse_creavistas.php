@@ -24,7 +24,7 @@ $link=conectarbd();
     $sql="CREATE OR REPLACE VIEW sisbol.vw_barrio AS
     SELECT id_barrio,CONCAT(nombre_bar,' ',comuna_bar) AS descripcion FROM sisbol.barrio";
     $res=pg_query($link,$sql);
-    echo $res[0];
+    //echo $res[0];
     if(!$res){
         echo "<div class='col-sm-12'>vw_barrio NO CREADA</div>";
         $error++;
@@ -34,7 +34,7 @@ $link=conectarbd();
 
 
     $sql="CREATE OR REPLACE VIEW sisbol.vw_boleta AS
-    SELECT boleta.codi_bol,boleta.id_camp,detalle_bol.nume_dbo,cliente.tpid_cli,cliente.nrod_cli,cliente.exped_cli,concat(cliente.nomb_cli,' ',cliente.apel_cli) as nombre,cliente.tele_cli,CONCAT(cliente.dire_cli,' ',barrio.nombre_bar) AS direccion,cliente.emai_cli,tipo.desc_tip AS tipo_ident,campania.nombre_camp,campania.mecanica_camp,campania.fechafin_camp
+    SELECT boleta.codi_bol,boleta.id_camp,detalle_bol.nume_dbo,cliente.tpid_cli,cliente.nrod_cli,cliente.exped_cli,concat(cliente.nomb_cli,' ',cliente.apel_cli) as nombre,cliente.tele_cli,CONCAT(cliente.dire_cli,' ',barrio.nombre_bar) AS direccion,cliente.emai_cli,tipo.desc_tip AS tipo_ident,campania.nombre_camp,campania.mecanica_camp,campania.fechafin_camp,boleta.anul_bol
     FROM sisbol.boleta
     INNER JOIN sisbol.detalle_bol ON detalle_bol.codi_bol=boleta.codi_bol
     INNER JOIN sisbol.cliente ON cliente.codi_cli=boleta.codi_cli
