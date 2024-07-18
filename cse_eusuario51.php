@@ -55,7 +55,7 @@ $consulta=pg_query($link,$consulta);
   }
   ?>  
 </table>
-<!--<input type='text' name='codi_cli' value="<?php echo $_GET[codi_cli];?>">-->
+
 <br>
 <table class='Tb0' width='70%'>
   <tr>
