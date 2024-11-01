@@ -55,7 +55,7 @@ $consulta=pg_query($link,$consulta);
   }
   ?>  
 </table>
-
+<!---Aqui se borra esta linea-->
 <br>
 <table class='Tb0' width='70%'>
   <tr>
